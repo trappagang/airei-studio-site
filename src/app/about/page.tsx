@@ -6,8 +6,14 @@ import { Footer } from "@/components/landing/footer";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-black">
-      <main className="flex-grow pt-[64px] text-white">
+    <div className="min-h-screen bg-black text-white">
+      <h1 className="text-6xl font-bold text-neon-pink text-center py-16">
+        About Us
+      </h1>
+      <p className="text-lg text-center px-8">
+        Learn more about our mission, vision, and the digital spirit of anime.
+      </p>
+      <main className="flex-grow pt-[64px]">
         <StudioPhilosophy />
         <OurMission />
         <OurStory />

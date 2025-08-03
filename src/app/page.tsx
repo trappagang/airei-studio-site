@@ -1,21 +1,25 @@
 import { HeroSection } from "@/components/landing/hero-section";
-import { AboutPreview } from "@/components/landing/about-preview";
-import { ServicesPreview } from "@/components/landing/services-preview";
-import { ProjectsPreview } from "@/components/landing/projects-preview";
-import { RoadmapTeaser } from "@/components/landing/roadmap-teaser";
-import { CtaSection } from "@/components/landing/cta-section";
+import { AboutUs } from "@/components/landing/about-us";
+import { OurProjects } from "@/components/landing/our-projects";
+import { VisualShowcase } from "@/components/landing/visual-showcase";
+import { TechStack } from "@/components/landing/tech-stack";
+import { Roadmap } from "@/components/landing/roadmap";
+import { Contact } from "@/components/landing/contact";
 import { Footer } from "@/components/landing/footer";
+import { JoinRealm } from "@/components/landing/join-realm";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-black text-white font-orbitron">
       <main className="flex-grow pt-[64px]">
         <HeroSection />
-        <AboutPreview />
-        <ServicesPreview />
-        <ProjectsPreview />
-        <RoadmapTeaser />
-        <CtaSection />
+        <AboutUs />
+        <OurProjects />
+        <VisualShowcase />
+        <TechStack />
+        <Roadmap />
+        <Contact />
+        <JoinRealm />
       </main>
       <Footer />
     </div>
