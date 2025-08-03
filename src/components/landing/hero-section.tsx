@@ -39,33 +39,26 @@ export function HeroSection() {
   const [glyphs, setGlyphs] = useState<JSX.Element[]>([]);
 
   useEffect(() => {
-    // This runs only on the client to avoid hydration mismatch
     const isMobile = window.innerWidth < 768;
-    const glyphCount = isMobile ? 10 : 25;
+    const glyphCount = isMobile ? 15 : 30;
     setGlyphs(Array.from({ length: glyphCount }).map((_, i) => <AnimatedGlyph key={i} />));
   }, []);
 
   return (
-    <div className="relative h-[calc(100vh-64px)] flex flex-col items-center justify-center text-center overflow-hidden bg-background p-4">
-      <div className="absolute inset-0 w-full h-full z-0 opacity-50">
+    <div className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-gradient-to-r from-purple-900 via-black to-purple-900 p-4">
+      <div className="absolute inset-0 w-full h-full z-0">
         {glyphs}
       </div>
       <div className="relative z-10 flex flex-col items-center">
-        <h1 
-          className="font-headline text-8xl md:text-9xl font-bold text-glow select-none"
-          aria-label="AIREI"
-        >
-          霊
+        <h1 className="font-headline text-8xl md:text-9xl font-bold text-neon-pink select-none">
+          AIREI
         </h1>
-        <p className="font-headline text-xl md:text-2xl mt-4 text-foreground/80 max-w-md">
+        <p className="font-headline text-xl md:text-2xl mt-4 text-white/80 max-w-md">
           The Digital Spirit of Anime
         </p>
-        <Button size="lg" className="mt-8 glow-on-hover font-headline text-lg" asChild>
-          <Link href="/contact">Launch Interface</Link>
+        <Button size="lg" className="mt-8 bg-neon-pink hover:bg-neon-pink/80 text-black font-bold" asChild>
+          <Link href="/contact">Explore Now</Link>
         </Button>
-      </div>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <ArrowDown className="w-6 h-6 text-foreground/50 animate-bounce" />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -15,10 +14,11 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
+  { name: "Wiki", href: "/wiki" },
+  { name: "Art", href: "/art" },
+  { name: "Manga", href: "/manga" },
+  { name: "Openings", href: "/openings" },
+  { name: "Merch", href: "/merch" }
 ];
 
 export function Header() {
@@ -38,8 +38,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-background/80 backdrop-blur-sm border-b border-border/50" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 bg-black/80 text-white border-b border-neon-pink/50"
       )}
     >
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
