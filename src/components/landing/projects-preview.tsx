@@ -1,8 +1,10 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Section } from "./section";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -56,9 +58,11 @@ export function ProjectsPreview() {
         ))}
       </div>
       <div className="text-center mt-12">
-        <Button variant="outline" size="lg" className="group font-headline">
-          See All Projects
-          <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+        <Button variant="outline" size="lg" className="group font-headline" asChild>
+          <Link href="/projects">
+            See All Projects
+            <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </Link>
         </Button>
       </div>
     </Section>

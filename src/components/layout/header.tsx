@@ -12,11 +12,12 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Languages, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Projects", href: "#projects" },
+  { name: "Projects", href: "/projects" },
   { name: "Services", href: "#services" },
   { name: "Roadmap", href: "#roadmap" },
   { name: "Contact", href: "#contact" },
@@ -41,15 +42,15 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="/" className="font-headline text-2xl text-foreground">
+        <Link href="/" className="font-headline text-2xl text-foreground">
           AIREI <span className="text-primary">Studio</span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="nav-link-glow">
+            <Link key={link.name} href={link.href} className="nav-link-glow">
               {link.name}
-            </a>
+            </Link>
           ))}
           <LanguageSwitcher />
         </nav>
@@ -65,9 +66,9 @@ export function Header() {
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-6 text-lg mt-8">
                 {navLinks.map((link) => (
-                  <a key={link.name} href={link.href} className="text-foreground hover:text-primary transition-colors">
+                  <Link key={link.name} href={link.href} className="text-foreground hover:text-primary transition-colors">
                     {link.name}
-                  </a>
+                  </Link>
                 ))}
                 <div className="pt-4">
                     <LanguageSwitcher />
