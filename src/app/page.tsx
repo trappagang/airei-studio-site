@@ -9,7 +9,7 @@ import { Footer } from "@/components/landing/footer";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <main className="flex-grow">
+      <main className="flex-grow pt-[64px]">
         <HeroSection />
         <AboutPreview />
         <ServicesPreview />

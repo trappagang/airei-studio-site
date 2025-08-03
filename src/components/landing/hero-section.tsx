@@ -45,7 +45,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <div className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-background p-4">
+    <div className="relative h-[calc(100vh-64px)] flex flex-col items-center justify-center text-center overflow-hidden bg-background p-4">
       <div className="absolute inset-0 w-full h-full z-0 opacity-50">
         {glyphs}
       </div>
