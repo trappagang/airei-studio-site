@@ -2,7 +2,6 @@ import { ContactForm } from "@/components/contact/contact-form";
 import { JoinUs } from "@/components/contact/join-us";
 import { Footer } from "@/components/landing/footer";
 import { Section } from "@/components/landing/section";
-import { useEffect, useState } from "react";
 
 export default function ContactPage() {
     return (

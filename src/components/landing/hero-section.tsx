@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const GLYPHS = "霊気アニメ未来技術ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ".split("");
 
@@ -60,7 +61,7 @@ export function HeroSection() {
           The Digital Spirit of Anime
         </p>
         <Button size="lg" className="mt-8 glow-on-hover font-headline text-lg" asChild>
-          <a href="/contact">Launch Interface</a>
+          <Link href="/contact">Launch Interface</Link>
         </Button>
       </div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
