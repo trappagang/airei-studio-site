@@ -60,7 +60,7 @@ export function HeroSection() {
           The Digital Spirit of Anime
         </p>
         <Button size="lg" className="mt-8 glow-on-hover font-headline text-lg" asChild>
-          <a href="#services">Launch Interface</a>
+          <a href="/contact">Launch Interface</a>
         </Button>
       </div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">

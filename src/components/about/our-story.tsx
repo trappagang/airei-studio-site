@@ -36,17 +36,17 @@ export function OurStory() {
       </div>
 
       <div className="relative max-w-5xl mx-auto">
-        <div className="absolute left-4 md:left-1/2 w-0.5 h-full bg-primary/30 -translate-x-1/2" />
+        <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-primary/30" />
         {storyEvents.map((event, index) => (
-          <div key={index} className="relative pl-12 md:pl-0 mb-12 last:mb-0 item-fade-in" style={{ animationDelay: `${index * 200}ms`}}>
-            <div className="md:flex items-center">
-              <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8 md:text-right'}`}>
-                 <div className="absolute -left-1.5 md:left-1/2 w-4 h-4 bg-accent rounded-full border-2 border-primary mt-1.5 -translate-x-1/2" />
-                 <div className={`p-6 rounded-lg border border-primary/30 bg-card/5 glow-on-hover ${index % 2 !== 0 ? 'md:text-left' : ''}`}>
-                    <p className="text-primary font-headline text-2xl mb-1">{event.year}</p>
-                    <h3 className="font-headline text-2xl md:text-3xl mb-2 text-accent">{event.title}</h3>
-                    <p className="text-foreground/80">{event.description}</p>
-                 </div>
+          <div key={index} className="relative pl-8 md:pl-0 mb-12 last:mb-0 item-fade-in" style={{ animationDelay: `${index * 200}ms`}}>
+            <div className={`md:flex items-center ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
+              <div className="md:w-1/2">
+                <div className={`p-6 rounded-lg border border-primary/30 bg-card/5 glow-on-hover relative ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
+                  <div className={`absolute top-4 w-4 h-4 bg-accent rounded-full border-2 border-primary ${index % 2 === 0 ? '-right-8 md:-right-10' : '-left-8 md:-left-10'} `} />
+                   <p className="text-primary font-headline text-xl mb-1">{event.year}</p>
+                   <h3 className="font-headline text-2xl md:text-3xl mb-2 text-accent">{event.title}</h3>
+                   <p className="text-foreground/80">{event.description}</p>
+                </div>
               </div>
               <div className="md:w-1/2" />
             </div>

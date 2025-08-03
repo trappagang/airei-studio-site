@@ -234,3 +234,42 @@ body {
     right: -6px;
     transform: translateX(50%);
 }
+
+@media (max-width: 767px) {
+    .timeline::before {
+        left: 2rem;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        padding-left: 3rem; 
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(odd) .md\:mr-8,
+    .timeline-item:nth-child(even) .md\:ml-8 {
+        margin: 0;
+    }
+
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before {
+        left: 2rem; 
+        transform: translateX(-50%);
+    }
+
+    .timeline-item:nth-child(odd) .absolute,
+    .timeline-item:nth-child(even) .absolute {
+        right: auto;
+        left: 2rem;
+        transform: translateX(-50%);
+    }
+
+     .timeline-item:nth-child(odd) .md\:flex-row-reverse,
+    .timeline-item:nth-child(even) .md\:flex-row-reverse {
+        flex-direction: row;
+    }
+}

@@ -18,13 +18,13 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
-  { name: "Services", href: "#services" },
   { name: "Roadmap", href: "#roadmap" },
-  { name: "Contact", href: "#contact" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +33,8 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header
@@ -56,7 +58,7 @@ export function Header() {
         </nav>
 
         <div className="md:hidden">
-          <Sheet>
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
@@ -66,7 +68,7 @@ export function Header() {
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-6 text-lg mt-8">
                 {navLinks.map((link) => (
-                  <Link key={link.name} href={link.href} className="text-foreground hover:text-primary transition-colors">
+                  <Link key={link.name} href={link.href} className="text-foreground hover:text-primary transition-colors" onClick={closeMenu}>
                     {link.name}
                   </Link>
                 ))}

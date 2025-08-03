@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Section } from "./section";
+import Link from "next/link";
 
 export function CtaSection() {
   return (
@@ -15,8 +16,11 @@ export function CtaSection() {
           size="lg" 
           className="mt-8 font-headline text-lg relative glitch-button"
           data-text="Launch Interface"
+          asChild
         >
-          <span className="relative z-10">Launch Interface</span>
+          <Link href="/contact">
+            <span className="relative z-10">Launch Interface</span>
+          </Link>
         </Button>
       </div>
     </Section>
