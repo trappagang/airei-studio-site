@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
+  { name: "About", href: "/about" },
   { name: "Projects", href: "#projects" },
   { name: "Services", href: "#services" },
   { name: "Roadmap", href: "#roadmap" },
@@ -41,7 +41,7 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="#" className="font-headline text-2xl text-foreground">
+        <a href="/" className="font-headline text-2xl text-foreground">
           AIREI <span className="text-primary">Studio</span>
         </a>
 
